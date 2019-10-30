@@ -1,5 +1,32 @@
 const arr1 = [1,2,3,4];
 const arr2 = [2,4,5,6,7];
 
-arr1.map(x => arr2.includes(x)).length;
+const createTextElement = (tag, text) => {
+  const elem = document.createElement(tag);
+  elem.textContent = text;
+  return elem;
+}
 
+const App = document.getElementById('app');
+
+const container = document.createElement('div');
+const question = createTextElement(
+  'p',
+  `Find the duplicated elements of [${arr1}] and [${arr2}]`,
+);
+const code = createTextElement(
+  'code',
+  `arr1.filter(x => arr2.includes(x)).length;`,
+)
+const answer = createTextElement(
+  'p',
+  `- The answer is "${arr1.filter(x => arr2.includes(x)).length}" from the code below:`
+)
+
+code.classList.add('code-block');
+
+container.appendChild(question);
+container.appendChild(answer);
+container.appendChild(code);
+
+App.appendChild(container);
