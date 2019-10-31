@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 
 import HTML5Elements from './components/HTML5Elements';
-import Css from './components/Css';
+import Css from './components/Fetch';
 import Questions from './components/Questions';
 
 const styles = {
@@ -28,7 +28,7 @@ function App() {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/css">CSS</Link>
+              <Link to="/fetch">Fetch</Link>
             </li>
             <li>
               <Link to="/questions">Questions</Link>
@@ -42,7 +42,7 @@ function App() {
           <Route exact path="/">
             <HTML5Elements />
           </Route>
-          <Route path="/css">
+          <Route path="/fetch">
             <Css />
           </Route>
           <Route path="/questions">
