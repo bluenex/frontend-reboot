@@ -36,7 +36,7 @@ function App() {
           </ul>
         </nav>
 
-        <hr />
+        <hr style={{margin: 0}} />
 
         <Switch>
           <Route exact path="/">
